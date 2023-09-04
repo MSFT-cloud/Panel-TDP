@@ -1,0 +1,328 @@
+﻿<Page x:Class="Power_Control_Panel.PowerControlPanel.Pages.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Power_Control_Panel.PowerControlPanel.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="800"
+      MinWidth="450"
+      Title="SettingsPage">
+
+    <Page.Resources>
+       
+    </Page.Resources>
+
+
+    <ScrollViewer Margin="5,10,0,0" PanningMode="VerticalOnly">
+        <StackPanel Orientation="Vertical" >
+
+            <DockPanel Height="30" Margin="0,0,0,10" >
+
+
+                <Button x:Name="btnSave" Content="{DynamicResource Settings_SaveSettings}" HorizontalAlignment="Right" DockPanel.Dock="Right" Click="btnSave_Click" Margin="15,0,0,0"></Button>
+                <Button x:Name="btnUpdate" Content="{DynamicResource Settings_UpdateSettings}" HorizontalAlignment="Left" DockPanel.Dock="Right"  Click="btnUpdate_Click" ></Button>
+                <Label Content="Settings saved" x:Name="lblSaved" Visibility="Collapsed"  VerticalAlignment="Center" HorizontalAlignment="Right"  Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}" FontSize="16" DockPanel.Dock="Right" Height="19"  Padding="0,0,10,0" Margin="10,0,0,0" />
+
+            </DockPanel>
+
+
+            <GroupBox Name="GB_General_Settings" Margin="0,0,0,10">
+                   <GroupBox.Header >
+                    <DockPanel Height="30">
+                        <Label Content="{DynamicResource Settings_GeneralSettings}" VerticalAlignment="Center"  Foreground="White" FontSize="16" DockPanel.Dock="Left" Height="19"  Padding="0,0,0,0" />
+                        <mah:ToggleSwitch Foreground="White" DockPanel.Dock="Right" x:Name="toggleGeneral"  Toggled="toggleGeneral_Toggled" IsOn="True" OffContent="{DynamicResource Hide}" OnContent="{DynamicResource Show}" MaxHeight="35" HorizontalAlignment="Right"  Width="100" VerticalAlignment="Center"  />
+
+                    </DockPanel>
+                </GroupBox.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+
+                    </Grid.RowDefinitions>
+                    <Border  Grid.Row="0" BorderBrush="Gray" BorderThickness="0,0,0,0" />
+                    <Border  Grid.Row="1" BorderBrush="Gray" BorderThickness="0,1,0,0"  />
+                    <Border  Grid.Row="2" BorderBrush="Gray" BorderThickness="0,1,0,0"  />
+                    <Border  Grid.Row="3" BorderBrush="Gray" BorderThickness="0,1,0,0"  />
+                    <Border  Grid.Row="4" BorderBrush="Gray" BorderThickness="0,1,0,0"  />
+                    <Border  Grid.Row="5" BorderBrush="Gray" BorderThickness="0,1,0,0"  />
+                    <Border  Grid.Row="6" BorderBrush="Gray" BorderThickness="0,1,0,0"  />
+                    <Border  Grid.Row="7" BorderBrush="Gray" BorderThickness="0,1,0,0"  />
+                    <Border  Grid.Row="8" BorderBrush="Gray" BorderThickness="0,1,0,0"  />                    
+           
+                    <DockPanel   >
+
+                        <Label Content="{DynamicResource Settings_Theme}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20"/>
+                        <ComboBox  x:Name="cboAccentTheme"  Width="150" Style="{DynamicResource MahApps.Styles.ComboBox}" FontSize="20"  DockPanel.Dock="Right" HorizontalAlignment="Right" IsEditable="False">
+                            <ComboBoxItem Content="Red"/>
+                            <ComboBoxItem Content="Green"/>
+                            <ComboBoxItem Content="Blue"/>
+                            <ComboBoxItem Content="Purple"/>
+                            <ComboBoxItem Content="Orange"/>
+                            <ComboBoxItem Content="Lime"/>
+                            <ComboBoxItem Content="Emerald"/>
+                            <ComboBoxItem Content="Teal"/>
+                            <ComboBoxItem Content="Cyan"/>
+                            <ComboBoxItem Content="Cobalt"/>
+                            <ComboBoxItem Content="Indigo"/>
+                            <ComboBoxItem Content="Violet"/>
+                            <ComboBoxItem Content="Pink"/>
+                            <ComboBoxItem Content="Magenta"/>
+                            <ComboBoxItem Content="Crimson"/>
+                            <ComboBoxItem Content="Amber"/>
+                            <ComboBoxItem Content="Yellow"/>
+                            <ComboBoxItem Content="Brown"/>
+                            <ComboBoxItem Content="Olive"/>
+                            <ComboBoxItem Content="Steel"/>
+                            <ComboBoxItem Content="Mauve"/>
+                            <ComboBoxItem Content="Taupe"/>
+                            <ComboBoxItem Content="Sienna"/>
+
+                        </ComboBox>
+                        <ComboBox Style="{DynamicResource MahApps.Styles.ComboBox}" x:Name="cboLightDarkTheme"  FontSize="20" Width="120" HorizontalAlignment="Right" IsEditable="False" DockPanel.Dock="Right"  >
+
+                            <ComboBoxItem Content="Light" />
+                            <ComboBoxItem Content="Dark" />
+
+                        </ComboBox>
+
+                    </DockPanel>
+                    <DockPanel Grid.Row="1"  >
+
+                        <Label Content="{DynamicResource Settings_StartWithWindows}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20">
+          
+                        </Label>
+                        <ComboBox x:Name="cboAutoStart" Style="{DynamicResource MahApps.Styles.ComboBox}" FontSize="20" Width="200" HorizontalAlignment="Right" IsEditable="False" DockPanel.Dock="Right" >
+                            <ComboBoxItem Content="Enable" />
+                            <ComboBoxItem Content="Disable" />
+
+                        </ComboBox>
+
+
+                    </DockPanel>
+                    <DockPanel Grid.Row="2"  >
+
+                        <Label Content="{DynamicResource Settings_MinimumTDP}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20">
+
+                        </Label>
+                        <Label x:Name="txtsliderMinTDP" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="40" FontSize="17" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding ElementName=TDPMIN, Path=Value}"/>
+                        <Slider x:Name="TDPMIN" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="230" Height="40" Minimum="1" Maximum="80"   SmallChange="1" TickPlacement="None" IsSnapToTickEnabled="True" Loaded="Slider_Loaded" />
+
+                    </DockPanel>
+                    <DockPanel Grid.Row="3"  >
+
+                        <Label Content="{DynamicResource Settings_MaximumTDP}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20">
+
+                        </Label>
+                        <Label x:Name="txtsliderMaxTDP" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="40" FontSize="17" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding ElementName=TDPMAX, Path=Value}"/>
+                        <Slider x:Name="TDPMAX" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="230" Height="40" Minimum="5" Maximum="80"   SmallChange="1" TickPlacement="None" IsSnapToTickEnabled="True" Loaded="Slider_Loaded" />
+
+                    </DockPanel>
+                  
+                    <DockPanel Grid.Row="4"  >
+
+                        <Label Content="{DynamicResource Settings_CombineTDP}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20">
+
+                        </Label>
+                        <ComboBox x:Name="cboCombineTDP" Style="{DynamicResource MahApps.Styles.ComboBox}" FontSize="20" Width="200" HorizontalAlignment="Right" IsEditable="False" DockPanel.Dock="Right" >
+                            <ComboBoxItem Content="True" />
+                            <ComboBoxItem Content="False" />
+     
+                        </ComboBox>
+                     
+
+                    </DockPanel>
+                    <DockPanel Grid.Row="5"  >
+
+                        <Label Content="{DynamicResource Settings_MainWindowStyle}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20">
+
+                        </Label>
+                        <ComboBox x:Name="cboMWHomePageStyle" Style="{DynamicResource MahApps.Styles.ComboBox}" FontSize="20" Width="200" HorizontalAlignment="Right" IsEditable="False" DockPanel.Dock="Right" >
+                            <ComboBoxItem Content="Slider" />
+                            <ComboBoxItem Content="Grouped Slider" />
+                            <ComboBoxItem Content="Tile" />
+
+                        </ComboBox>
+
+
+                    </DockPanel>
+                
+                    <DockPanel Grid.Row="6"  >
+
+                        <Label Content="{DynamicResource Settings_Language}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20">
+
+                        </Label>
+                        <ComboBox x:Name="cboLanguage" Style="{DynamicResource MahApps.Styles.ComboBox}" FontSize="20" Width="200" HorizontalAlignment="Right" IsEditable="False" DockPanel.Dock="Right" >
+                            <ComboBoxItem Content="English" />
+                            <ComboBoxItem Content="中文" />
+
+                        </ComboBox>
+
+
+                    </DockPanel>
+
+                    <DockPanel Grid.Row="7"  >
+
+                        <Label Content="{DynamicResource Settings_SteamDirectory}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20">
+
+                        </Label>
+                        <TextBox x:Name="txtbxSteamDirectory" Width="Auto" FontSize="14" />
+
+
+                    </DockPanel>
+                    <DockPanel Grid.Row="8"  >
+
+                        <Label Content="{DynamicResource Settings_PlayNiteDirectory}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20">
+
+                        </Label>
+                        <TextBox x:Name="txtbxPlayNiteDirectory" Width="Auto" FontSize="14" />
+
+
+                    </DockPanel>
+                </Grid>
+
+
+
+
+
+            </GroupBox>
+
+            <GroupBox Name="GB_INTEL_TDP" Margin="0,0,0,10">
+                <GroupBox.Header >
+                    <DockPanel Height="30">
+                        <Label Content="{DynamicResource Settings_IntelSettings}" VerticalAlignment="Center"  Foreground="White" FontSize="16" DockPanel.Dock="Left" Height="19"  Padding="0,0,0,0" />
+
+                        
+                    </DockPanel>
+                </GroupBox.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+
+                    </Grid.RowDefinitions>
+                    <Border  Grid.Row="0" BorderBrush="Gray" BorderThickness="0,0,0,0" />
+
+
+                 
+
+                  
+                    <DockPanel Grid.Row="0"  >
+
+                        <Label Content="{DynamicResource Settings_IntelTDPType}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20">
+
+                        </Label>
+                        <ComboBox x:Name="cboTDPTypeIntel" Style="{DynamicResource MahApps.Styles.ComboBox}" FontSize="20" Width="200" HorizontalAlignment="Right" IsEditable="False" DockPanel.Dock="Right" >
+                            <ComboBoxItem Content="MMIO" />
+                            <ComboBoxItem Content="MSR" />
+                            <ComboBoxItem Content="MMIO + MSR" />
+                  
+                        </ComboBox>
+
+
+                    </DockPanel>
+                </Grid>
+
+
+
+
+
+            </GroupBox>
+
+            <GroupBox Name="GB_AMD_GPUCLK" Margin="0,0,0,10">
+                <GroupBox.Header >
+                    <DockPanel Height="30">
+                        <Label Content="{DynamicResource Settings_AMDSettings}" VerticalAlignment="Center"  Foreground="White" FontSize="16" DockPanel.Dock="Left" Height="19"  Padding="0,0,0,0" />
+
+
+                    </DockPanel>
+                </GroupBox.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+
+                    </Grid.RowDefinitions>
+                    <Border  Grid.Row="0" BorderBrush="Gray" BorderThickness="0,0,0,0" />
+
+
+
+
+
+                    <DockPanel Grid.Row="0"  >
+
+                        <Label Content="{DynamicResource Settings_AMDMaxGPUClk}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20">
+
+                        </Label>
+                        <Label x:Name="txtsliderMaxGPUCLK" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="40" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding ElementName=GPUCLKMAX, Path=Value}"/>
+                        <Slider x:Name="GPUCLKMAX" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="230" Height="40" Minimum="300" Maximum="2400" SmallChange="1" TickPlacement="None" IsSnapToTickEnabled="True" Loaded="Slider_Loaded" />
+
+
+
+                    </DockPanel>
+                </Grid>
+
+
+
+
+
+            </GroupBox>
+
+
+            <GroupBox Name="GB_CONTROLLERSHORTCUTS" Margin="0,0,0,10">
+                <GroupBox.Header >
+                    <DockPanel Height="30">
+                        <Label Content="{DynamicResource Settings_ControllerShortCuts}" VerticalAlignment="Center"  Foreground="White" FontSize="16" DockPanel.Dock="Left" Height="19"  Padding="0,0,0,0" />
+                    </DockPanel>
+                </GroupBox.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Border  Grid.Row="0" BorderBrush="Gray" BorderThickness="0,0,0,0" />
+                    <Border  Grid.Row="1" BorderBrush="Gray" BorderThickness="0,0,0,0" />
+                    <Border  Grid.Row="2" BorderBrush="Gray" BorderThickness="0,0,0,0" />
+                    <Border  Grid.Row="3" BorderBrush="Gray" BorderThickness="0,0,0,0" />
+                    <DockPanel Grid.Row="0"  >
+                        <Label Content="{DynamicResource Settings_ShortCutQAM}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20"/>
+
+                        <TextBox x:Name="txtbxShortCutQAM" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="230" Height="40"  />
+                    </DockPanel>
+                    <DockPanel Grid.Row="1"  >
+                        <Label Content="{DynamicResource Settings_ShortCutOSK}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20"/>
+
+                        <TextBox x:Name="txtbxShortCutOSK" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="230" Height="40"  />
+                    </DockPanel>
+                    <DockPanel Grid.Row="2"  >
+                        <Label Content="{DynamicResource Settings_ShortCutFSR}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20"/>
+
+                        <TextBox x:Name="txtbxShortCutFSR" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="230" Height="40"  />
+                    </DockPanel>
+                    <DockPanel Grid.Row="3"  >
+                        <Label Content="{DynamicResource Settings_ShortCutGameLauncher}" VerticalContentAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="20"/>
+
+
+                        <TextBox x:Name="txtbxShortCutGameLauncher" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="230" Height="40"  />
+                        <ComboBox Style="{DynamicResource MahApps.Styles.ComboBox}" x:Name="cboGameLauncher"  FontSize="20" Width="120" HorizontalAlignment="Right" IsEditable="False" DockPanel.Dock="Right"  >
+
+                            <ComboBoxItem Content="Steam" />
+                            <ComboBoxItem Content="PlayNite" />
+
+                        </ComboBox>
+                    </DockPanel>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

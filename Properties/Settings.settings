@@ -1,0 +1,105 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Power_Control_Panel.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="enableTDP" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="enableCPU" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="enableIntelPB" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="maxTDP" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">35</Value>
+    </Setting>
+    <Setting Name="IntelMMIOMSR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MMIO</Value>
+    </Setting>
+    <Setting Name="enableVolume" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showTDP" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showVolume" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showIntlPB" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="systemTheme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Light.Steel</Value>
+    </Setting>
+    <Setting Name="systemAutoStart" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Disable</Value>
+    </Setting>
+    <Setting Name="showGPUCLK" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="enableGPUCLK" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="enableDisplay" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showDisplay" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showCPU" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="maxGPUCLK" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1500</Value>
+    </Setting>
+    <Setting Name="homePageTypeMW" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Slider</Value>
+    </Setting>
+    <Setting Name="homePageTypeQAM" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Slider</Value>
+    </Setting>
+    <Setting Name="minTDP" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="Language" Type="System.String" Scope="User">
+      <Value Profile="(Default)">English</Value>
+    </Setting>
+    <Setting Name="showProfiles" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="qamButtonCombo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LB+RB+DPadRight</Value>
+    </Setting>
+    <Setting Name="oskButtonCombo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LB+RB+DPadDown</Value>
+    </Setting>
+    <Setting Name="fsrButtonCombo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">RB+B</Value>
+    </Setting>
+    <Setting Name="upgradeSettingsRequired" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="gameLauncherButtonCombo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LB+RB+DPadUp</Value>
+    </Setting>
+    <Setting Name="showBrightness" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="enableBrightness" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="directorySteam" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="directoryPlaynite" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="gameLauncher" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="enableCombinedTDP" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
