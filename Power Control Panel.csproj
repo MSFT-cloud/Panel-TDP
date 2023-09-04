@@ -1,0 +1,191 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Power_Control_Panel</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationIcon>Resources\Pictures\PCP.ico</ApplicationIcon>
+    <Version>0.2.2.0</Version>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="PowerControlPanel\Logs\application_log.txt" />
+    <None Remove="PowerControlPanel\ProfileData\Profiles_Template.xml" />
+    <None Remove="ProjectSBC.png" />
+    <None Remove="Resources\AMD\RyzenAdj\inpoutx64.dll" />
+    <None Remove="Resources\AMD\RyzenAdj\libryzenadj.dll" />
+    <None Remove="Resources\AMD\RyzenAdj\ryzenadj.exe" />
+    <None Remove="Resources\AMD\RyzenAdj\ucrtbased.dll" />
+    <None Remove="Resources\AMD\RyzenAdj\vcruntime140d.dll" />
+    <None Remove="Resources\AMD\RyzenAdj\WinRing0x64.dll" />
+    <None Remove="Resources\AMD\RyzenAdj\WinRing0x64.sys" />
+    <None Remove="Resources\CRU\CRU.exe" />
+    <None Remove="Resources\EC\EC.exe" />
+    <None Remove="Resources\EC\WinRing0x64.sys" />
+    <None Remove="Resources\Intel\KX\KX.exe" />
+    <None Remove="Resources\Intel\MSR\msr-cmd.exe" />
+    <None Remove="Resources\Intel\MSR\winio-drv.exe" />
+    <None Remove="Resources\Intel\MSR\WinIo32.dll" />
+    <None Remove="Resources\Intel\MSR\WinIo32.sys" />
+    <None Remove="Resources\Intel\MSR\WinIo64.dll" />
+    <None Remove="Resources\Intel\MSR\WinIo64.sys" />
+    <None Remove="Resources\Intel\MSR\WinRing0x64.dll" />
+    <None Remove="Resources\Intel\MSR\WinRing0x64.sys" />
+    <None Remove="Resources\Intel\RW\Rw.exe" />
+    <None Remove="Resources\QRes\QRes.exe" />
+    <None Remove="Resources\SetDPI\SetDpi.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="PowerControlPanel\Logs\application_log.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PowerControlPanel\ProfileData\Profiles_Template.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AMD\RyzenAdj\inpoutx64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AMD\RyzenAdj\libryzenadj.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AMD\RyzenAdj\ryzenadj.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AMD\RyzenAdj\WinRing0x64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AMD\RyzenAdj\WinRing0x64.sys">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CRU\CRU.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\EC\EC.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\EC\WinRing0x64.sys">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Intel\KX\KX.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Intel\MSR\msr-cmd.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Intel\MSR\winio-drv.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Intel\MSR\WinIo32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Intel\MSR\WinIo32.sys">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Intel\MSR\WinIo64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Intel\MSR\WinIo64.sys">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Intel\MSR\WinRing0x64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Intel\MSR\WinRing0x64.sys">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Intel\RW\Rw.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\PCP.ico" />
+    <Content Include="Resources\QRes\QRes.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SetDPI\SetDpi.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autoupdater.NET.Official" Version="1.7.5" />
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
+    <PackageReference Include="InputSimulatorCore" Version="1.0.5" />
+    <PackageReference Include="LibreHardwareMonitorLib" Version="0.9.0" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.9" />
+    <PackageReference Include="MahApps.Metro.IconPacks.FontAwesome" Version="4.11.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks.SimpleIcons" Version="4.11.0" />
+    <PackageReference Include="MouseKeyHook" Version="5.6.0" />
+    <PackageReference Include="SecretNest.SequentialScheduler" Version="1.0.2" />
+    <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
+    <PackageReference Include="squirrel.windows" Version="2.0.1" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+    <PackageReference Include="System.Management" Version="6.0.0" />
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+    <PackageReference Include="TaskScheduler" Version="2.10.1" />
+    <PackageReference Include="ViceCode.LiveCharts.Wpf" Version="1.2.1.1" />
+  </ItemGroup>
+	<ItemGroup>
+		<Reference Include="RTSSSharedMemoryNET">
+			<HintPath>Resources\RTSS\RTSSSharedMemoryNET.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="PowerControlPanel\Classes\StartUp\Resources\StringResources.ru.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="QuickAccessMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+
+	<ItemGroup>
+		<FrameworkReference Update="Microsoft.WindowsDesktop.App;Microsoft.WindowsDesktop.App.WPF;Microsoft.WindowsDesktop.App.WindowsForms" TargetingPackVersion="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="PowerControlPanel\Pages\Settings\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="ProjectSBC.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Resource>
+	</ItemGroup>
+
+</Project>
