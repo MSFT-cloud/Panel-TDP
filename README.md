@@ -18,9 +18,6 @@ Restart the computer
 # Requirements:
 You need .net 6.0 desktop to run this software OR download the self contained zip in the releases (newer versions only).
 
-# Download
-You can find it in the releases tab here https://github.com/project-sbc/Power-Control-Panel-v2/releases
-
 # Compatible Devices (Windows only)
 ## Aya
 -Aya Neo/Pro/Retro/Next/Air/Air Pro
